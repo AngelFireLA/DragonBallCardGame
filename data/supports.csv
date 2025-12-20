@@ -3,7 +3,7 @@ name,image_path,category,effect,cost
 "Bulma","","Supporter","Si vous avez Végéta sur le terrain, il gagne 3000 d'attaque. Le coût de Trunks est réduit à 0",2
 "SSJ2","","Transformation","Transforme un saiyan en SSJ2, multipliant par 2 ses stats.",4
 "SSB","","Transformation","Transforme un saiyan en Super Saiyan Bleu, multipliant par 4 ses stats.",8
-"Epée de Genki-dama","","Objet","Placez Trunks Max de votre main sur votre Trunks SSJ2++ actif gratuitement.",8
+"Epée de Genki-dama","","Objet","Placez Trunks Max de votre main sur votre Trunks SSJ2++ actif gratuitement.",6
 "Kaioken","","Transformation","Pendant un tour, X2 les dégâts du personnage",4
 "Kaioken x10","","Transformation","Pendant un tour, X4 les dégâts du personnage, mais infligez aussi la moitié des dégâts à ce personnage.",4
 "Ozaru","","Transformation","Transforme un saiyan en Ozaru, lui ajoutant un bouclier de 30k PV. Tant que le bouclier n'est pas détruit, le personnage gagne le tag berserk, il perd ses effets, et son attaque est fixée à 10k.",4
