@@ -3,9 +3,9 @@ import csv
 from engine.fighter import Fighter
 from engine.support import Support
 
-initial_hand_size = 3
-max_active_fighters = 3
-initial_ki_amount = 4
+initial_hand_size = 100
+max_active_fighters = 5
+initial_ki_amount = 40
 ki_gained_per_turn = 4
 cards_drawn_per_turn = 2
 

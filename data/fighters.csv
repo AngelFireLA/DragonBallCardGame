@@ -8,7 +8,7 @@ Brale SSL2,,150000,60000,,saiyan;fusion;berserk,Brale,5,10,Broly;Kale
 Broly,,20000,10000,,saiyan,,0,4,
 Broly SSL,,70000,25000,,saiyan;berserk,Broly,5,5,
 Majin Buu,,20000,10000,,,,0,5,
-Buuhan,,45000,13000,"Pour la fusion, Gohan n'a pas à être de votre camp.",,,0,0,Gohan;Buu
+Buuhan,,40000,13000,"Pour la fusion, Gohan n'a pas à être de votre camp.",,,0,0,Gohan;Buu
 Caulifla,,15000,5000,,saiyan,,0,4,
 Caulifla SSJ2,,35000,10000,,saiyan,Caulifla,2,3,
 Cell Parfait,,12000,4000,,,,0,4,
@@ -24,8 +24,8 @@ Master Fox,,140000,50000,,renard,,0,0,Fox Rouge;Fox Gris;Fox Jaune
 Freezer,,15000,10000,,race freezer,,0,3,
 Golden Freezer,,36000,23000,,race freezer,Freezer,5,3,
 Miraï Gohan,,20000,10000,,future;saiyan,,0,4,
-Gohan (enfant),,2000,1000,,saiyan,,0,1,
-Gohan (adulte),,10000,5000,,saiyan,,0,4,
+Gohan (enfant),,4000,1000,,saiyan,,0,1,
+Gohan (adulte),,10000,5000,,saiyan,,0,3,
 Ultimate Gohan,,50000,15000,,saiyan,Gohan (adulte),3,3,
 Gogéta,,30000,10000,,fusion;saiyan,,0,0,Goku;Végéta
 Gogéta SSB,,60000,20000,,fusion;saiyan,Gogéta,5,5,Goku;Végéta
@@ -35,16 +35,16 @@ Goku,,17000,10000,,saiyan,,0,3,
 Goku SSJ3,,25000,10000,,saiyan,Goku,3,2,
 Goku SSJ4,,50000,20000,,saiyan,Goku,4,4,
 Goku Ultra Instinct,,85000,25000,,saiyan,Goku,7,8,
-Goten (enfant),,3000,1000,,saiyan,,0,1,
-Gotenks,,12000,4000,,saiyan;fusion,,0,0,Gohan;Trunks
-Gotenks SSJ3,,30000,14000,,saiyan;fusion,Gotenks,3,4,Gohan;Trunks
+Goten (enfant),,5000,1000,,saiyan,,0,1,
+Gotenks,,12000,4000,,saiyan;fusion,,0,0,Goten;Trunks
+Gotenks SSJ3,,30000,14000,,saiyan;fusion,Gotenks,3,4,Goten;Trunks
 Jiren,,100000,20000,,univers 11,,0,13,
 Kale,,20000,5000,,saiyan,,0,5,
 Kale SSL,,75000,30000,,saiyan;berserk,Kale,5,5,
 Kefla,,60000,25000,,saiyan;fusion,,0,0,Caulifla;Kale
 Kefla SSL,,150000,50000,,saiyan;fusion,Kefla,5,10,Caulifla;Kale
 Paragus,,10000,5000,"Divise par 2 la puissance des personnages Berserk",saiyan,,0,3,
-Piccolo,,15000,5000,,namek,,0,5,
+Piccolo,,15000,5000,,namek,,0,3,
 Tengoh,,11000,4000,,saiyan;fusion,,0,5,Gohan;Goten
 Tengoh SSJ3,,32000,10000,,saiyan;fusion,Tengoh,3,4,Gohan;Goten
 Toppo,,75000,25000,,univers 11,,0,11,
@@ -53,10 +53,10 @@ Truhan,,12000,4000,,fusion;saiyan,,0,0,Gohan;Trunks
 Truhan SSJ3,,40000,15000,,fusion;saiyan,Truhan,3,4,Gohan;Trunks
 Miraï Truhan,,60000,20000,,fusion;saiyan;future,,0,0,Miraï Gohan;Miraï Trunks
 Miraï Truhan SSJ2,,85000,30000,,fusion;saiyan;future,Miraï Truhan,2,4,Miraï Gohan;Miraï Trunks
-Trunks (enfant),,3000,1000,,saiyan,,0,1,
+Trunks (enfant),,5000,1000,,saiyan,,0,1,
 Miraï Trunks,,20000,10000,,saiyan;future,,0,4,
 Miraï Trunks SSJ2++,,55000,15000,,saiyan;future,Miraï Trunks,3,3,
-Trunks Max,,100000,30000,,future;saiyan;berserk,Miraï Trunks SSJ2++,4,8,
+Miraï Trunks Max,,100000,30000,,future;saiyan;berserk,Miraï Trunks SSJ2++,4,8,
 Végéta,,15000,12000,,saiyan,,0,3,
 Végéta SSB Évolué,,70000,20000,,saiyan,Végéta,6,7,
 Végéto,,35000,15000,,fusion;saiyan,,0,0,Goku;Végéta

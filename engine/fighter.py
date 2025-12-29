@@ -11,6 +11,11 @@ class Fighter:
         self.form_level = form_level
         self.cost: int = cost
         self.fusion_members: list[str] = fusion_members
+        self.reduced_cost = False
+        self.temporary_health_shield = 1
+        self.temporary_attack_boost = 1
+        self.temporary_tags: list[str] = []
+        self.is_ozaru = False
 
     def reset(self):
         self.current_health = self.max_health

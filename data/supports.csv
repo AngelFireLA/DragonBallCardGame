@@ -1,11 +1,11 @@
 name,image_path,category,effect,cost
-"Chichi","","Supporter","Si vous avez Goku sur le terrain, il gagne 3000 d'attaque. Le coût de Gohan et Goten est réduit à 0",2
-"Bulma","","Supporter","Si vous avez Végéta sur le terrain, il gagne 3000 d'attaque. Le coût de Trunks est réduit à 0",2
+"Chichi","","Supporter","Si vous avez Goku sur le terrain, son attaque est multipliée par 1.5. Le coût de Gohan et Goten est réduit à 0",2
+"Bulma","","Supporter","Si vous avez Végéta sur le terrain, son attaque est multipliée par 2. Le coût de Trunks est réduit à 0",2
 "SSJ2","","Transformation","Transforme un saiyan en SSJ2, multipliant par 2 ses stats.",4
 "SSB","","Transformation","Transforme un saiyan en Super Saiyan Bleu, multipliant par 4 ses stats.",8
-"Epée de Genki-dama","","Objet","Placez Trunks Max de votre main sur votre Trunks SSJ2++ actif gratuitement.",6
 "Kaioken","","Transformation","Pendant un tour, X2 les dégâts du personnage",4
 "Kaioken x10","","Transformation","Pendant un tour, X4 les dégâts du personnage, mais infligez aussi la moitié des dégâts à ce personnage.",4
-"Ozaru","","Transformation","Transforme un saiyan en Ozaru, lui ajoutant un bouclier de 30k PV. Tant que le bouclier n'est pas détruit, le personnage gagne le tag berserk, il perd ses effets, et son attaque est fixée à 10k.",4
-"Golden Ozaru","","Transformation","Transforme un saiyan en Ozaru, lui ajoutant un bouclier de 30k PV. Tant que le bouclier n'est pas détruit, le personnage gagne le tag berserk, il perd ses effets, et son attaque est fixée à 25k. Le coût de cette carte est réduit à 2 si elle est jouée sur un Ozaru actif.",6
-"Trio de Renard","","Effet","Si deux Fox sont sur le terrain, invoquez gratuitement le troisième.",4
+"Trio de Renard","","Effet","Si deux Fox sont sur le terrain, invoquez gratuitement le troisième et fusionnez les.",4
+"Ozaru","","Transformation","Transforme un saiyan en Ozaru, lui ajoutant un bouclier de 20k PV. Tant que le bouclier n'est pas détruit, le personnage gagne le tag berserk, il perd ses effets, et son attaque est fixée à 10k.",4
+"Golden Ozaru","","Transformation","Transforme un saiyan en Ozaru, lui ajoutant un bouclier de 30k PV. Tant que le bouclier n'est pas détruit, le personnage gagne le tag berserk, il perd ses effets, et son attaque est fixée à 20k. Le coût de cette carte est réduit à 2 si elle est jouée sur un Ozaru actif.",6
+"Epée de Genki-dama","","Objet","Placez Miraï Trunks Max de votre main sur votre Trunks SSJ2++ actif gratuitement.",6

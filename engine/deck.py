@@ -1,8 +1,11 @@
 import random
 
+from utils import load_fighters, load_supports
+
+
 class Deck:
-    def __init__(self, cards):
-        self.cards = cards
+    def __init__(self, ):
+        self.cards = []
 
     def shuffle(self):
         random.shuffle(self.cards)
@@ -13,9 +16,19 @@ class Deck:
         return drawn_cards
 
     def reset(self):
-        for card in self.cards:
-            card.reset()
+        self.cards = load_fighters() + load_supports()
         random.shuffle(self.cards)
 
     def add_cards(self, cards):
         self.cards.extend(cards)
+
+    def get_card_of_name(self, name):
+        # returns the card if an exact name match is in the remaining deck, otherwise None
+        for card in self.cards:
+            if card.name == name:
+                return card
+        return None
+
+    def remove(self, card):
+        if card in self.cards:
+            self.cards.remove(card)
