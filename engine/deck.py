@@ -4,8 +4,10 @@ from utils import load_fighters, load_supports
 
 
 class Deck:
-    def __init__(self, ):
-        self.cards = []
+    def __init__(self, all_cards=None):
+        self.all_cards = load_fighters() + load_supports() if all_cards is None else all_cards
+        random.shuffle(self.all_cards)
+        self.cards = self.all_cards.copy()
 
     def shuffle(self):
         random.shuffle(self.cards)
@@ -16,7 +18,7 @@ class Deck:
         return drawn_cards
 
     def reset(self):
-        self.cards = load_fighters() + load_supports()
+        self.cards = self.all_cards.copy()
         random.shuffle(self.cards)
 
     def add_cards(self, cards):

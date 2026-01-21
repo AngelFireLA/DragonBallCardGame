@@ -14,12 +14,14 @@ class Support:
             for fighter in owner.active_fighters:
                 if "Goku" in fighter.name:
                     fighter.attack_power = int(fighter.attack_power * 1.5)
+                    print("Chichi support activated: Increasing Goku's attack power by 50%: ", fighter)
             for card in owner.hand:
                 if "Gohan" in card.name or "Goten" in card.name:
                     card.reduced_cost = True
         elif self.name == "Bulma":
             for fighter in owner.active_fighters:
                 if "Vegeta" in fighter.name:
+                    print("Bulma support activated: Doubling Vegeta's attack power: ", fighter)
                     fighter.attack_power *= 2
             for card in owner.hand:
                 if "Trunks" in card.name in card.name:
@@ -31,7 +33,7 @@ class Support:
             chosen_fighter.current_health *= 2
             chosen_fighter.attack_power *= 2
         elif self.name == "SSB":
-            possible_boosted = [fighter for fighter in owner.active_fighters if "saiyan" in fighter.tags and fighter.form_level < 2 and not fighter.is_ozaru]
+            possible_boosted = [fighter for fighter in owner.active_fighters if "saiyan" in fighter.tags and fighter.form_level < 5 and not fighter.is_ozaru]
             if not possible_boosted:
                 return
             chosen_fighter: Fighter = owner.get_chosen_card("permanent_stat_multiplier_ssb", possible_boosted)

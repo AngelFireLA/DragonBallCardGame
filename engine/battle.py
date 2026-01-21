@@ -15,7 +15,10 @@ class Battle:
 
 
     def do_players_attacks(self):
+        print("Attacks phase:")
+        print("Player 1 fighters attacking:", self.player1.active_fighters)
         self.do_attacks(self.player1, self.player2)
+        print("Player 2 fighters attacking:", self.player2.active_fighters)
         self.do_attacks(self.player2, self.player1)
 
     def start(self, run=True):
@@ -44,17 +47,15 @@ class Battle:
             print(f"Turn {self.turn} begins.")
             self.recharge()
             self.players_setup_turn()
-            if self.player1.remaining_ki <= 0 or self.player2.remaining_ki <= 0:
-                if self.player1.remaining_ki <= 0 and self.player2.remaining_ki <= 0:
+            self.do_players_attacks()
+            if self.player1.remaining_hp <= 0 or self.player2.remaining_hp <= 0:
+                if self.player1.remaining_hp <= 0 and self.player2.remaining_hp <= 0:
                     print("It's a draw!")
-                elif self.player1.remaining_ki <= 0:
+                elif self.player1.remaining_hp <= 0:
                     print(f"{self.player2.name} wins!")
                 else:
                     print(f"{self.player1.name} wins!")
                 return
-
-            self.do_players_attacks()
-
             self.update_players_remaining_fighters()
             print(f"Turn {self.turn} ends.\n")
 
@@ -106,6 +107,8 @@ class Battle:
                 opponent_fighter = random.choice(defender.active_fighters)
                 if opponent_fighter.temporary_health_shield > 0:
                     opponent_fighter.temporary_health_shield = max(0,  opponent_fighter.temporary_health_shield-damage)
+                    if opponent_fighter.temporary_health_shield == 0:
+                        print(f"{opponent_fighter.name}'s temporary health shield is broken!")
                 else:
                     opponent_fighter.current_health -= damage
 

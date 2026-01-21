@@ -5,13 +5,13 @@ from engine.support import Support
 from utils import max_active_fighters, load_fighters, load_supports
 from engine.fighter import Fighter
 class Player:
-    def __init__(self, name):
+    def __init__(self, name, deck=None):
         self.name: str = name
         self.hand: list = []
         self.active_fighters: list[Fighter] = []
         self.remaining_hp: int = 100000
         self.remaining_ki: int = 0
-        self.deck: Deck = Deck()
+        self.deck: Deck = Deck() if not deck else deck
 
 
     def reset(self):
@@ -49,7 +49,7 @@ class Player:
         print("Cards in hand : ")
         print("- " + "\n- ".join([str(card) for card in self.hand]))
         print("Remaining KI:", self.remaining_ki, "Remaining HP:", self.remaining_hp)
-        chosen_action = input("Choose action - Play (F)ighter, Play (S)upport, (E)nd turn: ").strip().upper()
+        chosen_action = input("Choose action - Play (F)ighter, Play (S)upport, (D)iscard card, (R)edraw, (E)nd turn : ").strip().upper()
         while chosen_action != "E":
             if chosen_action == 'F':
                 if len(self.active_fighters) >= max_active_fighters:
@@ -102,7 +102,6 @@ class Player:
                         except ValueError as e:
                             print("Invalid input. Please enter a number.", e)
 
-                chosen_action = input("Choose action - Play (F)ighter, Play (S)upport, (E)nd turn: ").strip().upper()
             elif chosen_action == 'S':
                 supports = self.get_playable_supports_in_hand()
                 if not supports:
@@ -124,7 +123,35 @@ class Player:
                     except ValueError as e:
                         print("Invalid input. Please enter a number.", e)
 
-                chosen_action = input("Choose action - Play (F)ighter, Play (S)upport, (E)nd turn: ").strip().upper()
+            elif chosen_action == 'D':
+                print("Cards in hand : ")
+                for idx, card in enumerate(self.hand):
+                    print(f"{idx}:", card)
+                try:
+                    choice = int(input(f"Enter card index to discard: "))
+                    if 0 <= choice < len(self.hand):
+                        discarded_card = self.hand.pop(choice)
+                        print(f"{self.name} discarded {discarded_card.name}, regained 1 ki.")
+                        self.remaining_ki += 1
+                    else:
+                        print("Invalid choice. Try again.")
+                except ValueError as e:
+                    print("Invalid input. Please enter a number.", e)
+
+            elif chosen_action == 'R':
+                if self.remaining_ki < 2:
+                    print("Not enough ki to redraw.")
+                else:
+                    self.remaining_ki -= 2
+                    drawn_card = self.deck.draw(1)[0]
+                    if drawn_card:
+                        self.hand.append(drawn_card)
+                        print(f"{self.name} redrew and got {drawn_card}.")
+                    else:
+                        print("Deck is empty, cannot redraw.")
+                        self.remaining_ki += 2  # refund ki if deck is empty
             else:
                 print("Invalid action. Please choose again.")
-                chosen_action = input("Choose action - Play (F)ighter, Play (S)upport, (E)nd turn: ").strip().upper()
+            print("- " + "\n- ".join([str(card) for card in self.hand]))
+            print("Remaining KI:", self.remaining_ki, "Remaining HP:", self.remaining_hp)
+            chosen_action = input("Choose action - Play (F)ighter, Play (S)upport, (D)iscard card, (R)edraw, (E)nd turn : ").strip().upper()
