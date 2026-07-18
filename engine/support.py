@@ -28,6 +28,9 @@ class Support:
                     card.reduced_cost = True
         elif self.name == "SSJ2":
             possible_boosted = [fighter for fighter in owner.active_fighters if "saiyan" in fighter.tags and fighter.form_level < 2 and not fighter.is_ozaru]
+            if not possible_boosted:
+                print("no valid targets")
+                return
             chosen_fighter: Fighter = owner.get_chosen_card("permanent_stat_multiplier_ssj2", possible_boosted)
             chosen_fighter.form_level = 2
             chosen_fighter.current_health *= 2
@@ -35,6 +38,7 @@ class Support:
         elif self.name == "SSB":
             possible_boosted = [fighter for fighter in owner.active_fighters if "saiyan" in fighter.tags and fighter.form_level < 5 and not fighter.is_ozaru]
             if not possible_boosted:
+                print("no valid targets")
                 return
             chosen_fighter: Fighter = owner.get_chosen_card("permanent_stat_multiplier_ssb", possible_boosted)
             chosen_fighter.form_level = 5
